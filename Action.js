@@ -858,13 +858,11 @@ if (!fedo.style.top)
 
 
 function startLevel(){
-alert("finish supposed00");
 var elems = document.getElementsByClassName("image");
 for (var i = 0; i < elems.length; ++i) {
-alert(i);
     var item = elems[i].style.opacity = "1";
 }
-alert("finish supposed");
+
 var levelpopupelem = document.getElementById("levelpopup");
 levelpopupelem.style.display = 'none';
 }
