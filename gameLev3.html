@@ -1,0 +1,425 @@
+
+<html>
+	<head>
+    <script src="Action.js"></script>
+	<script src="Level3Array.js"></script>
+	</head>
+<audio id="leftmove" src="sound/leftmove.mp3" preload="true"></audio>
+<audio id="explosion" src="sound/explosion.mp3" preload="true"></audio>
+<audio id="start" src="sound/start.mp3" preload="true"></audio>
+<audio id="rookssound" src="sound/rooks.mp3" preload="true"></audio>
+	<body bgcolor="black">
+    
+	    <style >
+	.image{
+	opacity:0.3 ;
+	}
+	</style>
+	
+	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="00" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:5px; z-index:3")>
+		    <img id="01" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:60px;top:5px; z-index:3")>
+		    <img id="02" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:120px;top:5px; z-index:3")>
+		    <img id="03" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:180px;top:5px; z-index:3")>
+		    <img id="04" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:240px;top:5px; z-index:3")>
+            <img id="05" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="06" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:5px; z-index:3")>
+		    <img id="07" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:420px;top:5px; z-index:3")>
+		    <img id="08" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:480px;top:5px; z-index:3")>
+		    <img id="09" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:540px;top:5px; z-index:3")>
+		    <img id="010" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:600px;top:5px; z-index:3")>
+		    <img id="011" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:660px;top:5px; z-index:3")>
+            <img id="012" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:720px;top:5px; z-index:3")>
+            <img id="013" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:780px;top:5px; z-index:3")>
+            <img id="014" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:840px;top:5px; z-index:3")>
+            <img id="015" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:900px;top:5px; z-index:3")>
+            <img id="016" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:960px;top:5px; z-index:3")>
+            <img id="017" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1020px;top:5px; z-index:3")>
+            <img id="018" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1080px;top:5px; z-index:3")>
+            <img id="019" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:5px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       
+       
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="10" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:65px; z-index:3")>
+		    <img id="hamester" src="img/enterdoor.GIF" style="width:60px;height:60px;position:absolute;
+            left:60px;top:65px; z-index:5")>
+		    <img id="12" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:65px; z-index:3")>
+		    <img id="13" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:65px; z-index:3")>
+		    <img id="14" name="block_fall"
+             src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:65px; z-index:3")>
+            <img id="15" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:300px;top:65px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="16" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:65px; z-index:3")>
+		    <img id="17" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:65px; z-index:3")>
+		    <img id="18" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:65px; z-index:3")>
+		    <img id="19" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:65px; z-index:3")>
+		    <img id="110" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:65px; z-index:3")>
+            <img id="111" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:65px; z-index:3")>
+            <img id="112" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:65px; z-index:3")>
+            <img id="113" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:65px; z-index:3")>
+            <img id="114" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:65px; z-index:3")>
+            <img id="115" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:65px; z-index:3")>
+            <img id="116" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:65px; z-index:3")>
+            <img id="117" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:65px; z-index:3")>
+            <img id="118" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:65px; z-index:3")>
+            
+		    <img id="119" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:65px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+      
+      
+      
+      
+      
+      
+      	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="20" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:125px; z-index:3")>
+		    <img id="21" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:125px; z-index:3")>
+		    <img id="22" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:125px; z-index:3")>
+		    <img id="23" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:125px; z-index:3")>
+		    <img id="24" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:125px; z-index:3")>
+            <img id="25" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:300px;top:125px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="26" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:125px; z-index:3")>
+		    <img id="27" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:125px; z-index:3")>
+		    <img id="28" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:125px; z-index:3")>
+		    <img id="29" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:125px; z-index:3")>
+		    <img id="210" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:125px; z-index:3")>
+             <img id="211" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:125px; z-index:3")>
+            <img id="212" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:125px; z-index:3")>
+            <img id="213" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:125px; z-index:3")>
+            <img id="214" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:125px; z-index:3")>
+            <img id="215" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:125px; z-index:3")>
+            <img id="216" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:125px; z-index:3")>
+            <img id="217" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:125px; z-index:3")>
+            <img id="218" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:125px; z-index:3")>
+            
+		    <img id="219" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:125px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       
+       
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="30" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:185px; z-index:3")>
+		    <img id="31" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:185px; z-index:3")>
+		    <img id="32" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:185px; z-index:3")>
+		    <img id="33" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:185px; z-index:3")>
+		    <img id="34" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:185px; z-index:3")>
+            <img id="35" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:300px;top:185px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="36" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:185px; z-index:3")>
+		    <img id="37" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:185px; z-index:3")>
+		    <img id="38" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:185px; z-index:3")>
+		    <img id="39" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:185px; z-index:3")>
+		    <img id="310" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:185px; z-index:3")>
+             <img id="311" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:185px; z-index:3")>
+            <img id="312" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:185px; z-index:3")>
+            <img id="313" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:185px; z-index:3")>
+            <img id="314" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:185px; z-index:3")>
+            <img id="315" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:185px; z-index:3")>
+            <img id="316" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:185px; z-index:3")>
+            <img id="317" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:185px; z-index:3")>
+            <img id="318" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:185px; z-index:3")>
+            
+		    <img id="319" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:185px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="40" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:245px; z-index:3")>
+		    <img id="41" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:245px; z-index:3")>
+		    <img id="42" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:245px; z-index:3")>
+		    <img id="43" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:245px; z-index:3")>
+		    <img id="44" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:245px; z-index:3")>
+            <img id="45" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:300px;top:245px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="46" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:245px; z-index:3")>
+		    <img id="47" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:245px; z-index:3")>
+		    <img id="48" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:245px; z-index:3")>
+		    <img id="49" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:245px; z-index:3")>
+		    <img id="410" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:245px; z-index:3")>
+             <img id="411" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:245px; z-index:3")>
+            <img id="412" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:245px; z-index:3")>
+            <img id="413" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:245px; z-index:3")>
+            <img id="414" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:245px; z-index:3")>
+            <img id="415" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:245px; z-index:3")>
+            <img id="416" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:245px; z-index:3")>
+            <img id="417" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:245px; z-index:3")>
+            <img id="418" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:245px; z-index:3")>
+            
+		    <img id="419" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:245px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="50" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:305px; z-index:3")>
+		    <img id="51" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:305px; z-index:3")>
+		    <img id="52" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:305px; z-index:3")>
+		    <img id="53" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:305px; z-index:3")>
+		    <img id="54" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:305px; z-index:3")>
+            <img id="55" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:300px;top:305px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="56" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:360px;top:305px; z-index:3")>
+		    <img id="57" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:305px; z-index:3")>
+		    <img id="58" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:305px; z-index:3")>
+		    <img id="59" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:305px; z-index:3")>
+		    <img id="510" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:305px; z-index:3")>
+             <img id="511" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:305px; z-index:3")>
+            <img id="512" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:305px; z-index:3")>
+            <img id="513" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:305px; z-index:3")>
+            <img id="514" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:305px; z-index:3")>
+            <img id="515" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:305px; z-index:3")>
+            <img id="516" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:305px; z-index:3")>
+            <img id="517" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:305px; z-index:3")>
+            <img id="518" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:305px; z-index:3")>
+            
+		    <img id="519" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:305px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       
+        	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="60" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:365px; z-index:3")>
+		    <img id="61" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:365px; z-index:3")>
+		    <img id="62" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:365px; z-index:3")>
+		    <img id="63" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:365px; z-index:3")>
+		    <img id="64" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:365px; z-index:3")>
+            <img id="65" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:300px;top:365px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="66" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:365px; z-index:3")>
+		    <img id="67" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:420px;top:365px; z-index:3")>
+		    <img id="68" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:365px; z-index:3")>
+		    <img id="69" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:365px; z-index:3")>
+		    <img id="610" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:365px; z-index:3")>
+             <img id="611" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:365px; z-index:3")>
+            <img id="612" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:365px; z-index:3")>
+            <img id="613" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:365px; z-index:3")>
+            <img id="614" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:365px; z-index:3")>
+            <img id="615" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:365px; z-index:3")>
+            <img id="616" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:365px; z-index:3")>
+            <img id="617" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:365px; z-index:3")>
+            <img id="618" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:365px; z-index:3")>
+            
+		    <img id="619" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:365px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="70" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:425px; z-index:3")>
+		    <img id="71" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:425px; z-index:3")>
+		    <img id="72" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:425px; z-index:3")>
+		    <img id="73" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:425px; z-index:3")>
+		    <img id="74" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:425px; z-index:3")>
+            <img id="75" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:300px;top:425px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="76" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:360px;top:425px; z-index:3")>
+		    <img id="77" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:425px; z-index:3")>
+		    <img id="78" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:425px; z-index:3")>
+		    <img id="79" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:425px; z-index:3")>
+		    <img id="710" name="block_fall" src="img/DIRT.GIF" style="width:60px;height:60px;position:absolute;left:600px;top:425px; z-index:3")>
+             <img id="711" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:425px; z-index:3")>
+            <img id="712" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:425px; z-index:3")>
+            <img id="713" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:425px; z-index:3")>
+            <img id="714" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:425px; z-index:3")>
+            <img id="715" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:425px; z-index:3")>
+            <img id="716" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:425px; z-index:3")>
+            <img id="717" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:425px; z-index:3")>
+            <img id="718" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:425px; z-index:3")>
+            
+		    <img id="719" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:425px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+        
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="80" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:485px; z-index:3")>
+		    <img id="81" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:485px; z-index:3")>
+		    <img id="82" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:485px; z-index:3")>
+		    <img id="83" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:485px; z-index:3")>
+		    <img id="84" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:485px; z-index:3")>
+            <img id="85" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:300px;top:485px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="86" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:360px;top:485px; z-index:3")>
+		    <img id="87" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:485px; z-index:3")>
+		    <img id="88" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:485px; z-index:3")>
+		    <img id="89" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:485px; z-index:3")>
+		    <img id="810" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:485px; z-index:3")>
+             <img id="811" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:485px; z-index:3")>
+            <img id="812" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:485px; z-index:3")>
+            <img id="813" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:485px; z-index:3")>
+            <img id="814" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:485px; z-index:3")>
+            <img id="815" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:485px; z-index:3")>
+            <img id="816" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:485px; z-index:3")>
+            <img id="817" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:485px; z-index:3")>
+            <img id="818" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:485px; z-index:3")>
+            
+		    <img id="819" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:485px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       
+              
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="90" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:545px; z-index:3")>
+		    <img id="91" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:60px;top:545px; z-index:3")>
+		    <img id="92" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:120px;top:545px; z-index:3")>
+		    <img id="93" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:180px;top:545px; z-index:3")>
+		    <img id="94" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:240px;top:545px; z-index:3")>
+            <img id="95" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:300px;top:545px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="96" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:360px;top:545px; z-index:3")>
+		    <img id="97" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:420px;top:545px; z-index:3")>
+		    <img id="98" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:480px;top:545px; z-index:3")>
+		    <img id="99" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:540px;top:545px; z-index:3")>
+		    <img id="910" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:600px;top:545px; z-index:3")>
+             <img id="911" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:545px; z-index:3")>
+            <img id="912" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:545px; z-index:3")>
+            <img id="913" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:545px; z-index:3")>
+            <img id="914" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:545px; z-index:3")>
+            <img id="915" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:545px; z-index:3")>
+            <img id="916" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:545px; z-index:3")>
+            <img id="917" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:545px; z-index:3")>
+            <img id="918" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:545px; z-index:3")>
+            
+		    <img id="919" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:545px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+             
+       
+       
+       	   <div class="image" style=" margin-left:0px;position:absolute; width:550px;height:240px;" >
+		   <!--<img id="penguins" src="image3.jpg" style="width:60px;height:60px;position:absolute;left: 5px;top:0px; z-index:2">
+		   <img id="block" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:0px; z-index:1")>
+           
+		   <img name="block_fall" id= "fallingBlock" src="toba.png" style="width:60px;height:60px;position:absolute;left:5px;top:5px; z-index:3")>
+           -->
+		    <img id="100" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:0px;top:605px; z-index:3")>
+		    <img id="101" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:60px;top:605px; z-index:3")>
+		    <img id="102" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:120px;top:605px; z-index:3")>
+		    <img id="103" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:180px;top:605px; z-index:3")>
+		    <img id="104" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:240px;top:605px; z-index:3")>
+            <img id="105" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:300px;top:605px; z-index:3")>
+		    <!--<img id="diamond" src="diamond.png" style="width:60px;height:60px;position:absolute;left:300px;top:5px; z-index:1")>-->
+		    <img id="106" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:360px;top:605px; z-index:3")>
+		    <img id="107" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:420px;top:605px; z-index:3")>
+		    <img id="108" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:480px;top:605px; z-index:3")>
+		    <img id="109" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:540px;top:605px; z-index:3")>
+		    <img id="1010" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:600px;top:605px; z-index:3")>
+             <img id="1011" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:660px;top:605px; z-index:3")>
+            <img id="1012" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:720px;top:605px; z-index:3")>
+            <img id="1013" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:780px;top:605px; z-index:3")>
+            <img id="1014" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:840px;top:605px; z-index:3")>
+            <img id="1015" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:900px;top:605px; z-index:3")>
+            <img id="1016" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:960px;top:605px; z-index:3")>
+            <img id="1017" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1020px;top:605px; z-index:3")>
+            <img id="1018" name="block_fall" src="game.jpg" style="width:60px;height:60px;position:absolute;left:1080px;top:605px; z-index:3")>
+            
+		    <img id="1019" name="block_fall" src="block.png" style="width:60px;height:60px;position:absolute;left:1140px;top:605px; z-index:3")>
+<!-- z-index da by3ml awlawya ll pic kol ma el r9m ma byzeed kol ma m3nah en awlawya leeha a3lya -->
+	
+    
+       </div>
+       
+       
+       
+       <div>
+    <span id="error"></span>
+</div>
+<a id="levelpopup" href="#" onclick="startLevel();return false;"><img  alt="arrow" src="img/yellow-arrow3.png" style="background-color:black;position:absolute;left:38%;top:30%;z-index:3" width="250px"></a>
+
+	</body>
+    
+    
+
+</html>
