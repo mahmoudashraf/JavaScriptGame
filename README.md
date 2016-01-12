@@ -1,5 +1,5 @@
 # NativeJavaScriptGame
-It is a java script game built With Pure and native java script And implemented using some complex algorithms required by Information Technologu Institute -Smart Village
+It is a java script game built With Pure and native java script And implemented using some complex algorithms required by Information Technology Institute ITI  -Smart Village
 
 you can try this game using this url 
 #http://digginggim.site88.net
